@@ -209,7 +209,41 @@ def Messing():
     #plt.plot(t,vcor)
     plt.show()
     return;
-Kupfer()
-Alu()
-PVC()
-Messing()
+
+def Edelstahl():
+    print("-----Edelstahl-----")
+    t,v = loadCSV("Edelstahl.csv")
+    vcor = ppk.autocorrelate(v)
+
+    th = 0.7
+    peak = Xpeak(t,v,th)
+
+    peakdiff = np.array([])
+    for x in np.arange(len(peak)):
+        if x >= 1:
+            y = peak[x] - peak[x-1]
+            peakdiff = np.hstack((peakdiff,y))
+
+    pmean = np.mean(peakdiff)
+    per = np.std(peakdiff)/np.sqrt(len(peakdiff))
+
+    pt = uc.ufloat(pmean,per) # in ms
+    print("Differenzen der peaks in ms", peakdiff)
+    print("mean is ", pt)
+
+    lm = 0.525 + 0.013
+    ler = 0.0005
+    l = uc.ufloat(lm,ler) #länge stab m
+    rho = 7900 #dichte Edelstahl kg/m³
+
+    vel = 2*l/(pt/1000)
+    E = vel**2 * rho
+    print("Ausbreitungsgeschwindigkeit ist", vel)
+    print("Das E Modul ist", E)
+
+    plt.plot(t,v)
+    plt.title("Edelstahl")
+    plt.grid(True)
+    #plt.plot(t,vcor)
+    plt.show()
+    return;
