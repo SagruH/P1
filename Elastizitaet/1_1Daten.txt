@@ -1,0 +1,48 @@
+P1 Elas
+
+
+1.1
+
+Messuhr 3,6 g/mm
+
+Für alle
+
+Breite 2,5 cm
+Dicke 0,6 cm 
+Länge 50 cm ; Auflage 40cm
+
+Fehler Ablesen: +- 0.5
+
+mm 10**-2
+Zeiger gegen Uhrzeigersin
+* für 0 druchgang
+
+Messing
+0g 40
+200g 33
+500g 21
+1000 3 
+
+PVC
+0g 18
+200g 77 * 
+500g 4 *
+1000g 72 ***
+
+Alu
+0g 85
+200g 72
+500g 56
+1000g 29
+
+Edelstahl
+0g 71
+200g 66
+500g 59
+1000g 48
+
+Cu
+0g 24
+200g 18
+500g 8
+1000g 94 *

@@ -1,0 +1,22 @@
+P1 Elas 
+3 
+20 Perioden
+Messung in s
+ohne Gewichte:
+16.85
+16.66
+
+2 Gewichte:
+32.94
+32.72
+
+4 Gewichte:
+42.52
+42.93
+
+Abstand: Mittelpunkt Masse - Mittelpunkt aufhägung 11cm
+Länge der Probe: 80cm
+Masse 837g radius 3.5cm
+Durchmesser Probe: 3mm
+
+
