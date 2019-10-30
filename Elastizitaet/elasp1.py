@@ -48,6 +48,7 @@ def Xpeak(t,v,th):
         j+=1
     return peak;
 
+#Aufgabe 2
 
 def Alu():
     print("-----Alu-----")
@@ -68,7 +69,7 @@ def Alu():
 
     pt = uc.ufloat(pmean,per) # in ms
     print("mean is ", pt)
-    lm = 0.525 + 0.013
+    lm = 1.47 + 0.013
     ler = 0.0005
     l = uc.ufloat(lm,ler) #länge stab m
     rho = 2710 #dichte alu kg/m³
@@ -106,7 +107,7 @@ def Kupfer(): #zwei werte gelöscht da v = infinty
     print("Differenzen der peaks in ms", peakdiff)
     print("mean is ", pt)
 
-    lm = 0.525 + 0.013
+    lm = 1.47 + 0.013
     ler = 0.0005
     l = uc.ufloat(lm,ler) #länge stab m
     rho = 8920 #dichte Kupfer kg/m³
@@ -154,7 +155,7 @@ def PVC():
     print("Differenzen der peaks in ms", peakdiff)
     print("mean is ", pt)
 
-    lm = 0.525 + 0.013
+    lm = 1.47 + 0.013
     ler = 0.0005
     l = uc.ufloat(lm,ler) #länge stab m
     rho = 1400 #dichte PVC kg/m³
@@ -193,7 +194,7 @@ def Messing():
     print("Differenzen der peaks in ms", peakdiff)
     print("mean is ", pt)
 
-    lm = 0.525 + 0.013
+    lm = 1.47 + 0.013
     ler = 0.0005
     l = uc.ufloat(lm,ler) #länge stab m
     rho = 8730 #dichte Messing kg/m³
@@ -231,7 +232,7 @@ def Edelstahl():
     print("Differenzen der peaks in ms", peakdiff)
     print("mean is ", pt)
 
-    lm = 0.525 + 0.013
+    lm = 1.47 + 0.013
     ler = 0.0005
     l = uc.ufloat(lm,ler) #länge stab m
     rho = 7900 #dichte Edelstahl kg/m³
@@ -247,3 +248,9 @@ def Edelstahl():
     #plt.plot(t,vcor)
     plt.show()
     return;
+
+Alu()
+Kupfer()
+Edelstahl()
+PVC()
+Messing()
