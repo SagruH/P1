@@ -179,6 +179,7 @@ def Messing():
     vcor = ppk.autocorrelate(v)
 
     th = 0.75
+
     peak = Xpeak(t,v,th)
 
     peakdiff = np.array([])
@@ -249,8 +250,4 @@ def Edelstahl():
     plt.show()
     return;
 
-Alu()
-Kupfer()
-Edelstahl()
-PVC()
 Messing()
