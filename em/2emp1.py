@@ -7,3 +7,6 @@ from kafe.function_tools import FitFunction, LaTeX, ASCII
 from kafe.function_library import quadratic_3par
 
 import uncertainties as uc
+
+def abc:
+    
