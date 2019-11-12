@@ -29,6 +29,9 @@ def BFeld(I):
     B = B0 * K
     return B;
 
+def edmcalc(U,B,d):
+    edm = (8*np.pi()*U)/(B**2*d**2)
+
 def xyPlatte():
     Ux,Ix = loadCSV("2_2x.csv")
     Uy,Iy = loadCSV("2_2y.csv")
@@ -36,6 +39,8 @@ def xyPlatte():
     Ix2 = Ix**2
     Iy2 = Iy**2
 
+    dx
+    dy
 
     plt.plot(Ux,Ix2, label = "x-Platten")
     plt.plot(Uy,Iy2, label = "y-Platten")
