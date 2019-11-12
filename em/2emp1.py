@@ -16,15 +16,24 @@ def loadCSV(x):
     I = I[0]
     return U,I;
 
-def xPlatte():
+def xyPlatte():
     Ux,Ix = loadCSV("2_2x.csv")
-    print(Ux,Ix)
-    return
-
-def yPlatte():
     Uy,Iy = loadCSV("2_2y.csv")
-    print(Uy,Iy)
+
+    Ix2 = Ix**2
+    Iy2 = Iy**2
+
+    plt.plot(Ux,Ix2, label = "x-Platten")
+    plt.plot(Uy,Iy2, label = "y-Platten")
+    plt.xlabel("U in V")
+    plt.ylabel("I² in A²")
+    plt.title("Aufgabe 2 e/m-Bestimmung")
+    plt.grid(True)
+    plt.legend()
+
+    plt.show()
     return
 
-yPlatte()
-xPlatte()
+
+
+xyPlatte()
