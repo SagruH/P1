@@ -73,8 +73,8 @@ def xyPlatte():
     Ix2 = Ix**2
     Iy2 = Iy**2
 
-    d1 = uc.ufloat(0.062,0.001)
-    d2 = uc.ufloat(0.08,0.001)
+    d2 = uc.ufloat(0.062,0.001) # ist d1 beschreibt dy
+    d1 = uc.ufloat(0.08,0.001) #ist d2 beschreibt dx
     S = uc.ufloat(0.15,0.001)
 
     lamdaq1 = lamdaqcalc(d1,S)
