@@ -22,18 +22,6 @@ def loadCSV(x):
 
 
 
-def BFeld(I):
-    my0 = 1.256637 * 10**(-6)
-    L = uc.ufloat(0.2,0.0005)
-    n = 3000
-    R = uc.ufloat(0.045,0.0005)
-    a = 1 # Platzhalter
-    B0 = (my0*I*n/L) # info
-    K = (0.567*((a/sqrt(R**2+a**2))+((L-a)/sqrt(R**2+(L-a)**2))))
-    lamda = (my0 * n/L)*K
-    B = I * K
-    return B;
-
 def lamdafunc(a):
     my0 = 1.256637 * 10**(-6)
     L = uc.ufloat(0.2,0.0005)
@@ -43,9 +31,35 @@ def lamdafunc(a):
     lamda = (my0 * n/L)*K
     return lamda;
 
-def edmcalc(U,B,d):
-    edm = (8*np.pi()*U)/(B**2*d**2)
+def lamdaqcalc(d, S):
+    a = np.linspace(d,S,10000)
+    ad = a[100]-a[99]
+    lamda = np.array([])
+    Integral= 0
+    for i in a:
+        y = lamdafunc(i)
+        lamda = np.hstack((lamda,y))
+
+    for j in np.arange(len(lamda)):
+        if j>0:
+            Integral = Integral + (lamda[j-1]*ad) + (lamda[j]-lamda[j-1])*ad*1/2
+
+    lamdaq = (1/(S-d))*Integral
+    return lamdaq;
+
+def plotlamda():
+    a = np.linspace(-0.5,0.5,1000)
+    lamda = np.array([])
+    for i in a:
+        y = lamdafunc(i)
+        y = y.n
+        lamda = np.hstack((lamda,y))
+    print(lamda)
+    plt.plot(a,lamda)
+    plt.grid(True)
+    plt.show()
     return;
+
 
 def linregfunc(m,b):
     x=np.linspace(0,0.19,1000)
@@ -59,6 +73,31 @@ def xyPlatte():
     Ix2 = Ix**2
     Iy2 = Iy**2
 
+    d1 = uc.ufloat(0.062,0.001)
+    d2 = uc.ufloat(0.08,0.001)
+    S = uc.ufloat(0.15,0.001)
+
+    lamdaq1 = lamdaqcalc(d1,S)
+    lamdaq2 = lamdaqcalc(d2,S)
+
+    vfx = (8*(np.pi**2))/(d1**2 * lamdaq1**2)
+    vfy = (8*(np.pi**2))/(d2**2 * lamdaq2**2)
+
+
+    """
+    Uxc = (Ux*8*(np.pi**2))/(d1**2 * lamdaq1**2)
+    Uyc = (Uy*8*(np.pi**2))/(d2**2 * lamdaq2**2)
+
+    Uxv = np.array([])
+    for p in np.arange(len(Uxc)):
+        p1 = Uxc[p]
+        Uxv = np.hstack((Uxv,p1.n))
+
+    Uyv = np.array([])
+    for p in np.arange(len(Uyc)):
+        p1 = Uyc[p]
+        Uyv = np.hstack((Uyv,p1.n))
+    """
     xslope, intercept, xr_value, p_value, xstd_err = stats.linregress(Ix2,Ux)
     fx, xx = linregfunc(xslope,intercept)
 
@@ -67,6 +106,13 @@ def xyPlatte():
 
     print("r auf x: " , xr_value , "r auf y: " , yr_value)
     print("m von x: " , xslope , "m von y: " , yslope)
+
+    mx = uc.ufloat(xslope, xstd_err)
+    my = uc.ufloat(yslope, ystd_err)
+
+    edmx = mx * vfx
+    edmy = my * vfy
+    print("e/m auf x ist: " , edmx , "e/m auf y ist: " , edmy)
 
     plt.plot(xx,fx, label = "x-linreg")
     plt.plot(Ix2,Ux ,"og" , label = "x-Platten",)
@@ -80,15 +126,7 @@ def xyPlatte():
     plt.grid(True)
     plt.legend()
     plt.show()
+
     return
 
-a = np.linspace(-0.5,0.5,1000)
-lamda = np.array([])
-for i in a:
-    y = lamdafunc(i)
-    y = y.n
-    lamda = np.hstack((lamda,y))
-print(lamda)
-plt.plot(a,lamda)
-plt.grid(True)
-plt.show()
+xyPlatte()
