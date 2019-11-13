@@ -99,11 +99,11 @@ def xyPlatte():
     edmy = my * vfy
     print("e/m auf x ist: " , edmx , "e/m auf y ist: " , edmy)
 
-    plt.plot(xx,fx, label = "x-linreg")
-    plt.plot(Ix2,Ux ,"og" , label = "x-Platten",)
+    plt.plot(xx,fx, label = "x-Regressionsgerade")
+    plt.plot(Ix2,Ux ,"og" , label = "x-Messungen",)
 
-    plt.plot(xy,fy, label = "y-linreg")
-    plt.plot(Iy2,Uy, "or" , label = "y-Platten")
+    plt.plot(xy,fy, label = "y-Regressionsgerade")
+    plt.plot(Iy2,Uy, "or" , label = "y-Messungen")
 
     plt.ylabel("U in V")
     plt.xlabel("I² in A²")
