@@ -83,21 +83,6 @@ def xyPlatte():
     vfx = (8*(np.pi**2))/(d1**2 * lamdaq1**2)
     vfy = (8*(np.pi**2))/(d2**2 * lamdaq2**2)
 
-
-    """
-    Uxc = (Ux*8*(np.pi**2))/(d1**2 * lamdaq1**2)
-    Uyc = (Uy*8*(np.pi**2))/(d2**2 * lamdaq2**2)
-
-    Uxv = np.array([])
-    for p in np.arange(len(Uxc)):
-        p1 = Uxc[p]
-        Uxv = np.hstack((Uxv,p1.n))
-
-    Uyv = np.array([])
-    for p in np.arange(len(Uyc)):
-        p1 = Uyc[p]
-        Uyv = np.hstack((Uyv,p1.n))
-    """
     xslope, intercept, xr_value, p_value, xstd_err = stats.linregress(Ix2,Ux)
     fx, xx = linregfunc(xslope,intercept)
 
