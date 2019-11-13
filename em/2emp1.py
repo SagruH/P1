@@ -20,16 +20,28 @@ def loadCSV(x):
     I = I[0]
     return U,I;
 
+
+
 def BFeld(I):
     my0 = 1.256637 * 10**(-6)
     L = uc.ufloat(0.2,0.0005)
     n = 3000
     R = uc.ufloat(0.045,0.0005)
     a = 1 # Platzhalter
-    B0 = (my0*I*n/L)
+    B0 = (my0*I*n/L) # info
     K = (0.567*((a/sqrt(R**2+a**2))+((L-a)/sqrt(R**2+(L-a)**2))))
-    B = B0 * K
+    lamda = (my0 * n/L)*K
+    B = I * K
     return B;
+
+def lamdafunc(a):
+    my0 = 1.256637 * 10**(-6)
+    L = uc.ufloat(0.2,0.0005)
+    n = 3000
+    R = uc.ufloat(0.045,0.0005)
+    K = (0.567*((a/sqrt(R**2+a**2))+((L-a)/sqrt(R**2+(L-a)**2))))
+    lamda = (my0 * n/L)*K
+    return lamda;
 
 def edmcalc(U,B,d):
     edm = (8*np.pi()*U)/(B**2*d**2)
@@ -70,6 +82,13 @@ def xyPlatte():
     plt.show()
     return
 
-
-
-xyPlatte()
+a = np.linspace(-0.5,0.5,1000)
+lamda = np.array([])
+for i in a:
+    y = lamdafunc(i)
+    y = y.n
+    lamda = np.hstack((lamda,y))
+print(lamda)
+plt.plot(a,lamda)
+plt.grid(True)
+plt.show()
