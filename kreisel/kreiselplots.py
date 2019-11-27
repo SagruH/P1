@@ -47,4 +47,25 @@ def nutplot():
 
     return;
 
-nutplot()
+
+def praezplot():
+    Kf, pT = loadCSV("5praedata.csv")
+
+    xslopeoG, interceptoG, xr_value, p_value, xstd_err = stats.linregress(KoG,NoG)
+    fx, xx = linregfunc(xslopeoG,interceptoG)
+
+    plt.plot(xx,fx , label = "Regressionsgerade")
+    plt.plot(Kf,pT ,"or" , label = "Messwerte",)
+
+    plt.ylabel("Präzessionszeit in s")
+    plt.xlabel("Kreiselfrequenz in Hz")
+    plt.title("Aufgabe 5 Präzessions")
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+
+    return;
+
+
+
+praezplot()
