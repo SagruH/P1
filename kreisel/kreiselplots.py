@@ -18,7 +18,7 @@ def loadCSV(x):
     return t,v;
 
 def linregfunc(m,b):
-    x=np.linspace(1,18,1000)
+    x=np.linspace(4,26,1000)
     f = m*x+b
     return f,x;
 
@@ -51,7 +51,12 @@ def nutplot():
 def praezplot():
     Kf, pT = loadCSV("5praedata.csv")
 
-    xslopeoG, interceptoG, xr_value, p_value, xstd_err = stats.linregress(KoG,NoG)
+    pf = np.array([])
+    for i in pT:
+        x = 1/i
+        pf = np.hstack((pf,x))
+
+    xslopeoG, interceptoG, xr_value, p_value, xstd_err = stats.linregress(Kf,pT)
     fx, xx = linregfunc(xslopeoG,interceptoG)
 
     plt.plot(xx,fx , label = "Regressionsgerade")
