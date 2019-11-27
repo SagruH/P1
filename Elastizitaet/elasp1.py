@@ -249,5 +249,7 @@ def Edelstahl():
     #plt.plot(t,vcor)
     plt.show()
     return;
-
+Edelstahl()
+Kupfer()
+Alu()
 Messing()
