@@ -26,14 +26,14 @@ def nutplot():
     KoG, NoG = loadCSV("3_0ohneGewichtedata.csv")
     KmG, NmG = loadCSV("3_1mitGewichtedata.csv")
 
-    #xslopeoG, interceptoG, xr_value, p_value, xstd_err = stats.linregress(KoG,NoG)
-    #fxoG, xxoG = linregfunc(xslopeoG,interceptoG)
+    xslopeoG, interceptoG, xr_value, p_value, xstd_err = stats.linregress(KoG,NoG)
+    fxoG, xxoG = linregfunc(xslopeoG,interceptoG)
 
-    xslopemG, interceptmG, xr_value, p_value, xstd_err = stats.linregress(KmG,KmG)
+    xslopemG, interceptmG, xr_value, p_value, xstd_err = stats.linregress(KmG,NmG)
     fxmG, xxmG = linregfunc(xslopemG,interceptmG)
 
-    #plt.plot(xxoG,fxoG, label = "Regressionsgerade ohne Gewichte")
-    #plt.plot(KoG,NoG ,"og" , label = "Messung ohne Gewichte")
+    plt.plot(xxoG,fxoG, label = "Regressionsgerade ohne Gewichte")
+    plt.plot(KoG,NoG ,"og" , label = "Messung ohne Gewichte")
 
     plt.plot(xxmG,fxmG, label = "Regressionsgerade mit Gewichte")
     plt.plot(KmG,NmG ,"or" , label = "Messung mit Gewichten",)
