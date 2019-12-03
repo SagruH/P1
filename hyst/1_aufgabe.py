@@ -29,4 +29,17 @@ def main():
     plt.legend()
     plt.show()
     return;
-main()
+
+def HB_plot():
+    t, V1, V2 = loadCSV("3_1Messung.csv")
+    V1 = V1*208.33/1000
+    V2 = V2*1.32/1000
+    plt.xlabel("H-Feld")
+    plt.ylabel("B-Feld")
+    plt.plot(V1,V2)
+    plt.grid(True)
+    plt.title("H-B Kurve")
+    plt.show()
+    return;
+
+HB_plot()
