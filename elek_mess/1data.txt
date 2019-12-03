@@ -1,0 +1,73 @@
+Rx = R8 = 470 Ohm 
+
+1.1 Aufgabe
+a 4.73 kOhm
+b 65mV ; 36mA
+
+1.3 Aufgabe a) Spannungsrichtig b) Stromrichtig
+a   1mA Bereich myA 0.56mA
+    1V Bereich AVOhm 0.19V 
+b   1mA Bereich myA 0.35mA
+    1V Bereich AVOhm 0.23V
+
+Wdh -> Geräte Tausch
+a   1mA Bereich AVOhm 0.57mA
+    1V Bereich myA 0.26V
+b   1mA Bereich AVOhm 0.57mA
+    1V Bereich myA 0.32V
+    
+1.4 Aufgabe 1kOhm(R9) || Potti ( abgelesen) ; Rx || 1kOhm-Potti(abgelsen)
+myA 30V = 0 
+Potti = 701 Ohm 
+
+1.5 Aufgabe
+gemessen in myA 10 Ohm Bereich - 430Ohm
+
+1.6 Aufgabe
+Messung von Uh
+AVOhm bei 3V Bereich 1.6V
+Potti 4.73kOhm
+
+1.7 Aufgabe
+Messung Delta-U
+220Ohm - 16mV
+110Ohm - 23mV
+47hm - 35mV
+22Ohm - 47mV
+
+2.1 Aufgabe
+75 Ohm
+
+2.2. Aufgabe (AC)
+Generator belasted auf 0.2V
+Spannung an Vorwiderstand  80mV
+U Spule 0.15V
+
+2.3 Aufgabe
+Hz,mV,ms
+100,7.6,2
+120,10.7,1.75
+140,15.6,1.7
+160,25.7,1.3
+180,56.4,1
+185,68.2,0.9
+190,94.5,0.7
+195,129.1,0.3
+198.8,142.4,0
+200,142.3,0.1
+205,115.7,-0.5
+210,85.8,-0.8
+215,67,-0.8
+220,51.8,-1
+240,29.4,-0.95
+260,20.7,-0.9
+280,16.1,-0.9
+300,13.2,-0.8
+
+2.4 Aufgabe
+Spule L :6.06mA , 7.9V AC
+Kondensator C2: 6.28mA , 7.9V AC
+
+2.5 Aufgabe
+9.2V Leerlauf 
+für Leerlauf/2 : 641 Ohm

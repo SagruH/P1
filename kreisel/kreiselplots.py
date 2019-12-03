@@ -31,6 +31,8 @@ def nutplot():
 
     xslopemG, interceptmG, xr_value, p_value, xstd_err = stats.linregress(KmG,NmG)
     fxmG, xxmG = linregfunc(xslopemG,interceptmG)
+    #melanie
+    print("Steigung mit gewichte der Reg Gerade: " , xslopemG, "Steigung ohne Gewichte:" , xslopeoG)
 
     plt.plot(xxoG,fxoG, label = "Regressionsgerade ohne Gewichte")
     plt.plot(KoG,NoG ,"og" , label = "Messung ohne Gewichte")
@@ -73,4 +75,4 @@ def praezplot():
 
 
 
-praezplot()
+nutplot()
