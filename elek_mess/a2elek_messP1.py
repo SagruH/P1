@@ -40,7 +40,7 @@ def RLundL():
     return;
 
 #aufgabe 2.3
-def aufgabe23():
+def aufgabe23u4():
     f, U, dt = loadCSV("2_3data.csv",1,3)
     dphi = 2*np.pi*f*dt/1000
     w = 2*np.pi*f
@@ -77,7 +77,39 @@ def aufgabe23():
     U0 = 9.2
     RV = 10**6
     RR = UR * RV/(U0-UR)
-    print(UR,RR)
+
+    C = np.sqrt(3)/(RR*Dw)
+    L = 1/(w0**2*C)
+    R = (Dw*L)/np.sqrt(3)
+
+    #Aufgabe 2.4
+
+    LI = 6.06/1000 #A
+    LU = 7.9 #V AC
+    C2I = 6.28/1000 # A
+    C2U = LU
+
+    RL = LU/LI
+    RC = C2U/C2I
+
+    C4 = 1/(RC*w0)
+    L4 = RL/w0
+
+    print(C4,L4)
+
+    return;
+
+def aufgabe24():
+    LI = 6.06/1000 #A
+    LU = 7.9 #V AC
+    C2I = 6.28/1000 # A
+    C2U = LU
+
+    RL = LU/LI
+    RC = C2U/C2I
+
+
+    print(RC,RL)
     return;
 
 
@@ -91,6 +123,4 @@ def aufgabe23():
 
 
 
-
-
-aufgabe23()
+aufgabe23u4()
