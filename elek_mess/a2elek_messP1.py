@@ -20,3 +20,38 @@ def loadCSV(name,hlines=1,split=2):
     b = b[0]
     c = c[0]
     return a,b,c;
+
+#aufgabe 2
+
+#aufgabe 2.2
+
+def RLundL():
+    UG = 0.2 #V
+    UR = 0.08 #V
+    UL = 0.15 #V
+    RR = 110 #Ohm
+    f = 30 #Hz
+    w = 2*np.pi*f
+
+    RL = ((UG**2-UL**2-UR**2)/(2*UR**2))*RR
+    L = (RR/(UR*w))*np.sqrt(UL**2-UR**2)
+
+    print("Aufgabe 2:\nVerlustwiderstand der Spule: ", RL ,"\nInduktivität L: ", L)
+    return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RLundL()
