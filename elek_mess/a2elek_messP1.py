@@ -39,6 +39,46 @@ def RLundL():
     print("Aufgabe 2:\nVerlustwiderstand der Spule: ", RL ,"\nInduktivität L: ", L)
     return;
 
+#aufgabe 2.3
+def aufgabe23():
+    f, U, dt = loadCSV("2_3data.csv",1,3)
+    dphi = 2*np.pi*f*dt/1000
+    w = 2*np.pi*f
+    f0 = 198.8
+    w0 = 2*np.pi*f0
+
+    #find delta
+    #print(np.max(U)/2.) =71.2
+    Dwpos1 = np.where(U == 68.2)
+    Dwpos2 = np.where(U == 67)
+    Dw = w[Dwpos2]-w[Dwpos1]
+
+    #plot f-U
+    plt.xlabel("Frequenz in Hz")
+    plt.ylabel("Spannung in mV")
+    plt.plot(f,U,"or")
+    plt.plot(f,U,"b")
+    plt.grid(True)
+    #plt.show()
+    plt.clf()
+
+
+    #plot dphi-f
+    plt.xlabel("Frequenz in Hz")
+    plt.ylabel("Phasenverschiebung in Grad")
+    plt.plot(f,dphi,"or")
+    plt.plot(f,dphi,"b")
+    plt.grid(True)
+    #plt.show()
+    plt.clf()
+
+    #weitere Brechnungen
+    UR = np.max(U)/1000
+    U0 = 9.2
+    RV = 10**6
+    RR = UR * RV/(U0-UR)
+    print(UR,RR)
+    return;
 
 
 
@@ -53,5 +93,4 @@ def RLundL():
 
 
 
-
-RLundL()
+aufgabe23()
