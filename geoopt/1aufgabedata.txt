@@ -1,0 +1,201 @@
+1.1 Aufgabe
+laut beschriftung f=20cm
+130cm minus 
+    1. 106.2cm
+    2. 107.1cm
+    3. 105.1cm
+    4. 106.0cm
+    5. 106.7cm
+    
+1.2 Aufgabe
+Messreihe 1
+
+blau, innen messen
+schirm bei 130cm, dia bei 45cm, blau bei 29cm
+
+gross, klein in cm
+74.6,99.0
+75.2,98.9
+74.4,99.3
+75.1,98.7
+75.2,98.7
+75.9,99.3
+74.6,98.7
+75.0,98.5
+76.1,98.6
+76.4,99.2
+
+blau, ausen messen
+schirm bei 130cm, dia bei 45cm, blau bei 29cm
+
+groß,klein in cm
+75.2,98.4
+75.4,99.4
+75.4,99.4
+75.2,99.1
+75.0,98.6
+75.5,98.5
+75.1,99.2
+75.0.98.9
+74.9,98.5
+75.1,98.6
+
+rot, innen messen
+schirm bei 130cm, dia bei 45cm, rot bei 29cm
+
+groß,klein in cm
+74.9,97.8
+76.6,98.6
+75.1,97.7
+76.7,98.6
+75.4,97.0
+76.0,98.0
+75.0,97.9
+76.3,99.0
+75.3,98.5
+75.0,99.0
+
+rot, ausen messen
+schirm bei 130cm, dia bei 45cm, rot bei 29cm
+
+groß,klein in cm
+75.6,97.9
+75.8,98.7
+75.6,98.5
+75.7,98.6
+75.4,98.4
+75.3,98.2
+75.4,98.7
+75.3,99.0
+75.2,98.2
+75.5,97.9
+
+Messreihe 2
+
+rot, ausen messen
+schirm bei 130cm, dia bei 35cm, rot bei 29cm
+
+groß,klein in cm
+62.6,101.5
+62.2,101.4
+62.7,101.9
+62.6,101.4
+62.5,101.3
+62.4,101.4
+62.6,101.6
+62.2,101.8
+62.2,102.0
+62.1,101.0
+
+rot, innen messen
+schirm bei 130cm, dia bei 35cm, rot bei 29cm
+
+groß,klein in cm
+62.6,100.6
+63.9,100.7
+63.2,99.8
+63.2,100.2
+62.4,100.7
+61.9,101.2
+62.6,102.0
+62.3,101.9
+62.1,102.1
+63.8,101.7
+
+blau, ausen messen
+schirm bei 130cm, dia bei 35cm, blau bei 29cm
+
+groß,klein in cm
+62.1,102.2
+62.1,101.9
+62.3,101.4
+62.4,101.7
+62.1,101.7
+62.0,101.6
+61.8,102.3
+62.0,102.2
+62.1,102.2
+62.3,102.1
+
+blau, innen messen
+schirm bei 130cm, dia bei 35cm, blau bei 29cm
+
+groß,klein in cm
+61.5,102.2
+62.3,102.0
+62.1,101.3
+61.8,102.4
+62.5,101.7
+62.0,102.1
+62.0,102.9
+61.7,102.2
+62.2,100.9
+61.4,102.7
+
+1.3 Aufgabe
+Dia punkt größe: 0.9cm
+Linsen config 1 (Abstand = 11.35cm)
+linsen ap bei 69cm
+
+dia, punkt in cm
+52,1.6
+51,1.4
+50,1.4
+49,1.1
+48,1.0
+47,0.9
+
+gedreht:
+dia, punkt in cm
+52,0.7
+51,0.6
+50,0.6
+49,0.5
+48,0.5
+47,0.4
+
+Linsen config 2 (Abstand = 9.35cm)
+linsen ap bei 69cm
+
+dia, punkt in cm
+52,0.7
+51,0.7
+50,0.6
+49,0.5
+48,0.5
+47,0.4
+
+gedreht:
+dia, punkt in cm
+52,1.1
+51,1.0
+50,0.9
+49,0.9
+48,0.8
+47,0.7
+
+Linsen config 3 (Abstand = 15.35cm)
+linsen ap bei 69cm
+
+dia, punkt in cm
+52,1.6
+51,1.4
+50,1.2
+49,1.1
+48,1.0
+47,0.8
+
+gedreht:
+dia, punkt in cm
+52,0.8
+51,0.7
+50,0.7
+49,0.6
+48,0.6
+47,0.5
+
+
+
+
+
+
