@@ -194,8 +194,23 @@ dia, punkt in cm
 48,0.6
 47,0.5
 
+2.1 Aufgabe
+Verwendete Linse je 500mm und 50mm
 
+2.2 Aufgabe
+Verwendete Linse 8cm
+Lotrecht gemssen 400mm
+Dia bei 22.7cm
+Linse bei 30.8cm
+Licht etwa bei 12cm 
 
+2.3 Aufgabe
+1 mm zu 3,5 cm
+
+dia bei 42cm 
+linse 1 bei 48cm f=5cm
+linse 2 bei 96cm f=8cm 
+schirm bei 141cm
 
 
 
