@@ -11,6 +11,14 @@ from kafe.function_library import quadratic_3par
 import uncertainties as uc
 from uncertainties.umath import sqrt
 
+def loadCSV(name,hlines=1,split=2):
+    hlines, data = ppk.readCSV(name,hlines)
+    data = np.array(data)
+    a,b=np.split(data,split)
+    a = a[0] # anpassen nach split
+    b = b[0]
+    return a,b;
+
 def aufgabe11():
     '''gemessen 130cm -
         1. 106.2cm
@@ -34,4 +42,8 @@ def aufgabe11():
     print(fmean,fstd)
     return;
 
-aufgabe11()
+def evalCSV(name):
+    a, b = loadCSV(name)
+
+
+    return mean, std;
