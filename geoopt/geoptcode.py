@@ -59,6 +59,23 @@ def evalCSV(name,M):
     a2std = np.std(a2,ddof = True)
     return a1mean, a1std, a2mean, a2std;
 
+def f_and_error(data,e):
+    fafer = [0,1,2,3]
+    for i in [0,1,2,3]:
+        a1 = data[i][0]
+        a1std = data[i][1]
+        a2 = data[i][2]
+        a2std = data[i][3]
+
+        # need e a1std a2std a1 a2
+        f = (e**2 - (a2 - a1)**2)/(4*e)
+        a1er = (((a2-a1)*a1std)/(2*e))**2
+        a2er = (((a2-a1)*a2std)/(2*e))**2
+        eer = ((e**2+(a2-a1)**2)/(4*e**2))**2
+        fer = np.sqrt(a1er + a2er + eer)
+        fafer[i] = [f,fer]
+    return f, fer;
+
 
 def aufgabe12():
     schirm = 130
@@ -87,10 +104,6 @@ def aufgabe12():
         meanandstd_M2[j] = [a1mean, a1std, a2mean, a2std]
         j += 1
         print(s," a1: ",uc.ufloat(a1mean,a1std)," a2: ",uc.ufloat(a2mean,a2std))
-
-
-
-
 
     return;
 
