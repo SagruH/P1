@@ -70,14 +70,28 @@ def aufgabe12():
     data_list_M1 = np.array(["12ba1.csv","12bi1.csv","12ra1.csv","12ri1.csv"])
     data_list_M2 = np.array(["12ba2.csv","12bi2.csv","12ra2.csv","12ri2.csv"])
 
+    meanandstd_M1 = [0,1,2,3]
+    meanandstd_M2 = [0,1,2,3]
+    j = 0
     for s in data_list_M1:
         s = str(s)
         a1mean, a1std, a2mean, a2std = evalCSV(s,1)
+        meanandstd_M1[j] = [a1mean, a1std, a2mean, a2std]
+        j += 1
         print(s," a1: ",uc.ufloat(a1mean,a1std)," a2: ",uc.ufloat(a2mean,a2std))
 
+    j = 0
+    for s in data_list_M2:
+        s = str(s)
+        a1mean, a1std, a2mean, a2std = evalCSV(s,2)
+        meanandstd_M2[j] = [a1mean, a1std, a2mean, a2std]
+        j += 1
+        print(s," a1: ",uc.ufloat(a1mean,a1std)," a2: ",uc.ufloat(a2mean,a2std))
+
+
+
+
+
     return;
-
-
-
 
 aufgabe12()
