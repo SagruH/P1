@@ -67,12 +67,13 @@ def aufgabe12():
     dia2 = 35
     e1 = schirm - dia1
     e2 = schirm - dia2
-    data_list_M1= np.array(["12ba1.csv","12bi1.csv","12ra1.csv","12ri1.csv"])
+    data_list_M1 = np.array(["12ba1.csv","12bi1.csv","12ra1.csv","12ri1.csv"])
     data_list_M2 = np.array(["12ba2.csv","12bi2.csv","12ra2.csv","12ri2.csv"])
 
     for s in data_list_M1:
+        s = str(s)
         a1mean, a1std, a2mean, a2std = evalCSV(s,1)
-        print(s," a1: ",uc.float(a1mean,a1std)," a2: ",uc.float(a2mean,a2std))
+        print(s," a1: ",uc.ufloat(a1mean,a1std)," a2: ",uc.ufloat(a2mean,a2std))
 
     return;
 
