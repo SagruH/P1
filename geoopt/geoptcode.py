@@ -11,7 +11,7 @@ from kafe.function_library import quadratic_3par
 import uncertainties as uc
 from uncertainties.umath import sqrt
 
-def loadCSV(name,hlines=1,split=2):
+def loadCSV(name,hlines=2,split=2):
     hlines, data = ppk.readCSV(name,hlines)
     data = np.array(data)
     a,b=np.split(data,split)
@@ -42,15 +42,41 @@ def aufgabe11():
     print(fmean,fstd)
     return;
 
-def evalCSV(name):
-    a, b = loadCSV(name)
+def evalCSV(name,M):
+    big, small = loadCSV(name)
+    if M == 1:
+        dia = 45
+    elif M == 2:
+        dia = 35
+    else:
+        print("error: invalid M")
 
-
-    return mean, std;
+    a1 = big - dia
+    a2 = small - dia
+    a1mean = np.mean(a1)
+    a1std = np.std(a1,ddof = True)
+    a2mean = np.mean(a2)
+    a2std = np.std(a2,ddof = True)
+    return a1mean, a1std, a2mean, a2std;
 
 
 def aufgabe12():
-    data_list_blue= np.array(["12ba1.csv","12ba2.csv","12bi1.csv","12bi2.csv"])
-    data_list_red = np.array(["12ra1.csv","12ra2.csv","12ri1.csv","12ri2.csv"])
+    schirm = 130
+    farbe = 29
+    dia1 = 45
+    dia2 = 35
+    e1 = schirm - dia1
+    e2 = schirm - dia2
+    data_list_M1= np.array(["12ba1.csv","12bi1.csv","12ra1.csv","12ri1.csv"])
+    data_list_M2 = np.array(["12ba2.csv","12bi2.csv","12ra2.csv","12ri2.csv"])
+
+    for s in data_list_M1:
+        a1mean, a1std, a2mean, a2std = evalCSV(s,1)
+        print(s," a1: ",uc.float(a1mean,a1std)," a2: ",uc.float(a2mean,a2std))
 
     return;
+
+
+
+
+aufgabe12()
