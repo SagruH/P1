@@ -47,3 +47,10 @@ def evalCSV(name):
 
 
     return mean, std;
+
+
+def aufgabe12():
+    data_list_blue= np.array(["12ba1.csv","12ba2.csv","12bi1.csv","12bi2.csv"])
+    data_list_red = np.array(["12ra1.csv","12ra2.csv","12ri1.csv","12ri2.csv"])
+
+    return;
