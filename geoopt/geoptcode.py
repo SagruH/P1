@@ -61,6 +61,7 @@ def evalCSV(name,M):
 
 def f_and_error(data,e):
     fafer = [0,1,2,3]
+    eabw = 0.01
     for i in [0,1,2,3]:
         a1 = data[i][0]
         a1std = data[i][1]
@@ -71,10 +72,21 @@ def f_and_error(data,e):
         f = (e**2 - (a2 - a1)**2)/(4*e)
         a1er = (((a2-a1)*a1std)/(2*e))**2
         a2er = (((a2-a1)*a2std)/(2*e))**2
-        eer = ((e**2+(a2-a1)**2)/(4*e**2))**2
+        eer = (((e**2+(a2-a1)**2)*eabw)/(4*e**2))**2
         fer = np.sqrt(a1er + a2er + eer)
         fafer[i] = [f,fer]
-    return f, fer;
+    return fafer;
+
+
+def foveruc(data,e):
+    fuc = np.array([])
+    for i in [0,1,2,3]:
+        a1 = uc.ufloat(data[i][0],data[i][1])
+        a2 = uc.ufloat(data[i][2],data[i][3])
+        ex  = uc.ufloat(e,0.01)
+        f = (ex**2 - (a2 - a1)**2)/(4*ex)
+        fuc = np.hstack((fuc,f))
+    return fuc;
 
 
 def aufgabe12():
@@ -95,7 +107,7 @@ def aufgabe12():
         a1mean, a1std, a2mean, a2std = evalCSV(s,1)
         meanandstd_M1[j] = [a1mean, a1std, a2mean, a2std]
         j += 1
-        print(s," a1: ",uc.ufloat(a1mean,a1std)," a2: ",uc.ufloat(a2mean,a2std))
+        #print(s," a1: ",uc.ufloat(a1mean,a1std)," a2: ",uc.ufloat(a2mean,a2std))
 
     j = 0
     for s in data_list_M2:
@@ -103,7 +115,14 @@ def aufgabe12():
         a1mean, a1std, a2mean, a2std = evalCSV(s,2)
         meanandstd_M2[j] = [a1mean, a1std, a2mean, a2std]
         j += 1
-        print(s," a1: ",uc.ufloat(a1mean,a1std)," a2: ",uc.ufloat(a2mean,a2std))
+        #print(s," a1: ",uc.ufloat(a1mean,a1std)," a2: ",uc.ufloat(a2mean,a2std))
+
+    f1 = f_and_error(meanandstd_M1,e1)
+    f2 = f_and_error(meanandstd_M2,e2)
+    fuc1 = foveruc(meanandstd_M1,e1)
+    fuc2 = foveruc(meanandstd_M2,e2)
+
+
 
     return;
 
