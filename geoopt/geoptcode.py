@@ -39,7 +39,7 @@ def aufgabe11():
     lf = 130 - lp
     fmean = np.mean(lf)
     fstd = np.std(lf,ddof = True)
-    print(fmean,fstd)
+    print("Aufgabe 1.1 " ,uc.ufloat(fmean,fstd))
     return;
 
 def evalCSV(name,M):
@@ -122,8 +122,10 @@ def aufgabe12():
     fuc1 = foveruc(meanandstd_M1,e1)
     fuc2 = foveruc(meanandstd_M2,e2)
 
-
-
+    fuca = np.hstack((fuc1,fuc2))
+    ff = np.mean(fuca)
+    print("Aufgabe 1.2 " ,ff)
     return;
 
+aufgabe11()
 aufgabe12()
