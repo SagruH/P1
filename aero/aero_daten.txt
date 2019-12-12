@@ -1,0 +1,173 @@
+1.1 Aufgabe
+offset 5PA, 2.5m/s
+Drehzahl 2600 U/min
+l = 8cm
+r in cm,p in pa
+0,103
+1,105
+2,100
+3,65
+4,23
+5,19
+
+l=18cm
+r in cm,p in pa
+0,104
+1,95
+2,75
+3,46
+4,26
+5,17
+
+l=28cm
+r in cm,p in pa
+0,85
+1,65
+2,42
+3,33
+4,26
+5,18
+
+l=33cm
+r in cm,p in pa
+0,56
+1,51
+2,45
+3,30
+4,22
+5,19
+
+1.2 Aufgabe
+l = 20 ; r = 0
+Umin,v in m/ss,p in Pa
+600,4,10
+900,4.8,15
+1200,5.5,20
+1500,6.4,27
+1800,7.8,38
+2100,8.7,45
+2400,9.8,60
+2700,10.9,74
+
+2.1 Aufgabe
+Scheiben Durchmesser 40mm ;56mm ;80mm
+Wagen bei 20cm
+
+Kreisscheibe groß
+3.9N
+Kreisscheibe Mittel
+2.1N
+Kreisscheibe klein
+0.8N
+Haltestiel 
+0N
+
+2.2 Aufgabe
+l=20cm
+
+große Scheibe
+U/min,F
+600,0.4
+900,0.5
+1200,0.7
+1500,1.2
+1800,1.7
+2100,2.6
+2400,3.2
+2700,4.1
+
+mittlere Scheibe
+U/min,F
+600,0
+900,0.1
+1200,0.4
+1500,0.7
+1800,0.9
+2100,1.2
+2400,1.6
+2700,2
+
+2.3 Aufgabe
+bei 2700 U/min
+
+Halbkugel
+    Kugel vorne: 1.1N
+    Fläche vorne : 3.2N
+    
+Kugel: 0.8N
+
+Stromlinien Körper 
+    Spitze Vorne: 0.2N
+    Dicke stelle Vorne: 0.2N
+
+2.3 Aufgabe
+1,5cm*0.5cm
+bei 2700 U/min
+Auto: 0.4N
+
+3.1 Aufgabe
+
+Grad, Stömungswideerstand, Auftrieb
+0,0.1,0
+5,0.6,0.1
+10,0.4,0.15
+15,0.8,0.25
+20,2,0.3
+-5,0.6,-0.1
+-10,0.7,-0.1
+-15,0.8,-0.2
+-20,1.2,-0.2
+
+3.2 Aufgabe
+2600U/min
+0 entspricht offset (also bei 0 wurde offset schon abgezogen)
+Messstelle,Grad,Druck in Pa
+1,-20,57
+2,-20,30
+3,-20,-10
+4,-20,-10
+5,-20,-6
+6,-20,-9
+7,-20,-11
+8,-20,-14
+9,-20,0
+1,0,87
+2,0,-35
+3,0,-35
+4,0,-18
+5,0,-11
+6,0,-20
+7,0,-10
+8,0,0
+9,0,0
+1,20,31
+2,20,-38
+3,20,-15
+4,20,-10
+5,20,0
+6,20,25
+7,20,19
+8,20,14
+9,20,10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
