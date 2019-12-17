@@ -58,7 +58,37 @@ def aufgabe11_plots():
     plt.legend()
     plt.show()
 
+    return;
+
+
+def aufgabe12_plots():
+    U = np.linspace(600,2700,8)
+    v = np.array([4,4.8,5.5,6.4,7.8,8.7,9.8,10.9])
+
+    plt.plot(U,v, "-b")
+    plt.plot(U,v, "ob")
+
+    plt.ylabel("Luftgeschwindigkeit in m/s")
+    plt.xlabel("Umdrehungen pro Minute")
+    plt.title("Luftgeschwindigkeit bei r=0cm und l=20cm")
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+    return;
+
+def aufgabe21():
+
 
     return;
 
-aufgabe11_plots()
+
+
+
+
+
+
+
+
+
+
+aufgabe21()
