@@ -59,7 +59,7 @@ Kreisscheibe Mittel
 2.1N
 Kreisscheibe klein
 0.8N
-Haltestiel 
+Haltestiel
 0N
 
 2.2 Aufgabe
@@ -93,14 +93,14 @@ bei 2700 U/min
 Halbkugel
     Kugel vorne: 1.1N
     Fläche vorne : 3.2N
-    
+
 Kugel: 0.8N
 
-Stromlinien Körper 
+Stromlinien Körper
     Spitze Vorne: 0.2N
     Dicke stelle Vorne: 0.2N
 
-2.3 Aufgabe
+2.4 Aufgabe
 1,5cm*0.5cm
 bei 2700 U/min
 Auto: 0.4N
@@ -149,25 +149,3 @@ Messstelle,Grad,Druck in Pa
 7,20,19
 8,20,14
 9,20,10
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 
 from scipy import stats
 
-import kafe
-from kafe.function_tools import FitFunction, LaTeX, ASCII
-from kafe.function_library import quadratic_3par
+#import kafe
+#from kafe.function_tools import FitFunction, LaTeX, ASCII
+#from kafe.function_library import quadratic_3par
 
 import uncertainties as uc
 from uncertainties.umath import sqrt
@@ -76,8 +76,43 @@ def aufgabe12_plots():
     plt.show()
     return;
 
-def aufgabe21():
+def aufgabe21u2():
+    dK1 = 4 #cm durchmesser der Scheiben
+    dK2 = 5.6
+    dK3 = 8
+    dK = np.array([dK1,dK2,dK3])
+    rK = dK/2
+    AK = rK**2 * np.pi
+    l= 20
 
+    print("Fläsche Kreisscheibe 1-3 in cm²: " , AK)
+
+    FK1 = 0.8 #N Kraft auf Scheiben
+    FK2 = 2.1
+    FK3 = 3.9
+    FK = np.array([FK1,FK2,FK3])
+    FproA = FK/AK
+    print("Druck pro Fläche auf Kreisscheiben: " , FproA)
+
+    #Aufagbe 2.2
+    U = np.linspace(600,2700,8)
+    v = np.array([4,4.8,5.5,6.4,7.8,8.7,9.8,10.9])
+
+    K2F2 = np.array([0,0.1,0.4,0.7,0.9,1.2,1.6,2])
+    K3F2 = np.array([0.4,0.5,0.7,1.2,1.7,2.6,3.2,4.1])
+
+    plt.plot(v,K2F2,"-b", label = "mittlere Kreisscheibe")
+    plt.plot(v,K2F2,"ob")
+
+    plt.plot(v,K3F2,"-g", label = "große Kreisscheibe")
+    plt.plot(v,K3F2,"og")
+
+    plt.xlabel("Windgeschwindigkeit in m/s")
+    plt.ylabel("Kraft in N")
+    plt.title("Aufgabe 2.2: Stömungswiderstand über Windgeschwindigkeit")
+    plt.grid(True)
+    plt.legend()
+    plt.show()
 
     return;
 
@@ -91,4 +126,4 @@ def aufgabe21():
 
 
 
-aufgabe21()
+aufgabe21u2()
