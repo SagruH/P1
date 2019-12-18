@@ -32,9 +32,12 @@ def RLundL():
     RR = 110 #Ohm
     f = 30 #Hz
     w = 2*np.pi*f
+    I = UR/RR
 
+
+    ULR = ((UG**2-UL**2-UR**2)/(2*UR))
     RL = ((UG**2-UL**2-UR**2)/(2*UR**2))*RR
-    L = (RR/(UR*w))*np.sqrt(UL**2-UR**2)
+    L = (RR/(UR*w))*np.sqrt(UL**2-(ULR**2))
 
     print("Aufgabe 2:\nVerlustwiderstand der Spule: ", RL ,"\nInduktivität L: ", L)
     return;
@@ -112,6 +115,12 @@ def aufgabe24():
     print(RC,RL)
     return;
 
+def aufgabe25():
+    u0 = 9.2
+    RP = 641
+    Pmax = u0**2/(4*RP)
+    print(Pmax)
+    return;
 
 
 
@@ -122,5 +131,4 @@ def aufgabe24():
 
 
 
-
-aufgabe23u4()
+aufgabe25()
