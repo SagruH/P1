@@ -117,6 +117,32 @@ def aufgabe21u2():
     return;
 
 
+def aufgabe23u4():
+    U = 2700
+    v = 10.9 #m/s
+
+    d = 0.056 #m
+    A = (d/2)**2 * np.pi
+    p = 1.2
+
+    #HK konvex ; HK flach ; Kugel ; StromlK
+    F_array = np.array([1.1,3.2,0.8,0.2])
+
+    cw = (2*F_array)/(p*A*v**2)
+
+
+    print("Querschnittfläche :" , A)
+    print("cw Werte: " , cw)
+
+    #Aufgabe2.4
+    AS = 0.015*0.005 #m
+    FS = 0.4
+    cwS = (2*FS)/(p*AS*v**2)
+
+    print("A Spielzeug: " , AS)
+    print("cw Spielzeug: " , cwS)
+
+    return;
 
 
 
@@ -125,5 +151,4 @@ def aufgabe21u2():
 
 
 
-
-aufgabe21u2()
+aufgabe23u4()
