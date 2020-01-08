@@ -44,7 +44,7 @@ def calibrate(): #berechung des offsets
     #plt.plot(n,t)
     #plt.plot(n,t,'og')
     #plt.show()
-    #print("Offset: ", intercept)
+    print("Offset: ", intercept)
     return intercept;
 
 def value_g(lr,Tphy):
@@ -58,13 +58,29 @@ def aufgabe12():
     offset = calibrate()
     data[1:] = data[1:]/1000 # time from ms to s
     data[1:] = data[1:]-offset # offset korrektur
-    '''
-    for x in np.arange(1,7):
-        plt.plot(data[0],data[x],label=str(x))
-        plt.legend()
+
+    for x in np.arange(1,7):    #Daten plot
+        if x == 1:
+            Mname = "Messreihe 1, fest"
+        elif x == 2:
+            Mname = "Messreihe 1, beweglich"
+        elif x == 3:
+            Mname = "Messreihe 2, fest"
+        elif x == 4:
+            Mname = "Messreihe 2, beweglich"
+        elif x == 5:
+            Mname = "Messreihe 3, fest"
+        elif x == 6:
+            Mname = "Messreihe 3, beweglich"
+        plt.plot(data[0],data[x],label=Mname)
+    plt.legend()
+    plt.title("Messdaten")
+    plt.xlabel("h in cm")
+    plt.ylabel("t in s")
+    plt.grid(True)
     plt.show()
-    '''
-    data[1:] = data[1:]/5
+
+    data[1:] = data[1:]/5 #Messadaten zu Perioden T
     #mitteln der Messreihen
     Tf = np.array([])
     Tb = np.array([])
@@ -99,10 +115,10 @@ def aufgabe12():
     plt.grid(True)
     plt.show()
     '''
-    #slopef = uc.ufloat(slopef,std_errf)
-    #slopeb = uc.ufloat(slopeb,std_errb)
-    #interceptf = uc.ufloat(interceptf,0)
-    #interceptb = uc.ufloat(interceptb,0)
+    slopef = uc.ufloat(slopef,std_errf)
+    slopeb = uc.ufloat(slopeb,std_errb)
+    interceptf = uc.ufloat(interceptf,0)
+    interceptb = uc.ufloat(interceptb,0)
     print(slopef,interceptf)
     lr = (interceptb-interceptf)/(slopef-slopeb)
     print("lr = ",lr)
