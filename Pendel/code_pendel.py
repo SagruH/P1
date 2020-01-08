@@ -58,7 +58,7 @@ def aufgabe12():
     offset = calibrate()
     data[1:] = data[1:]/1000 # time from ms to s
     data[1:] = data[1:]-offset # offset korrektur
-
+    '''
     for x in np.arange(1,7):    #Daten plot
         if x == 1:
             Mname = "Messreihe 1, fest"
@@ -79,7 +79,7 @@ def aufgabe12():
     plt.ylabel("t in s")
     plt.grid(True)
     plt.show()
-
+    '''
     data[1:] = data[1:]/5 #Messadaten zu Perioden T
     #mitteln der Messreihen
     Tf = np.array([])
@@ -98,9 +98,10 @@ def aufgabe12():
         Tfstd = np.hstack((Tfstd,tTfstd))
         Tbstd = np.hstack((Tbstd,tTbstd))
 
+
     slopef, interceptf, r_value, p_value, std_errf = stats.linregress(rh,Tf)
     slopeb, interceptb, r_value, p_value, std_errb = stats.linregress(rh,Tb)
-    '''
+
     plt.plot(rh,Tf,"og",label="Periodendauern fest")
     x1,y1=linregfunc(slopef,interceptf)
     plt.plot(x1,y1,"-g",label="LinReg")
@@ -110,11 +111,12 @@ def aufgabe12():
     plt.plot(x2,y2,"-b",label="LinReg")
 
     plt.legend()
+    plt.title("Periodendauern")
     plt.xlabel("h in cm")
     plt.ylabel("T in s")
     plt.grid(True)
     plt.show()
-    '''
+
     slopef = uc.ufloat(slopef,std_errf)
     slopeb = uc.ufloat(slopeb,std_errb)
     interceptf = uc.ufloat(interceptf,0)
