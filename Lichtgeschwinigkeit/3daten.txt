@@ -1,0 +1,17 @@
+Aufgabe 2.3.2
+Wasser  120cm--> delta=689.5ns
+Aufgabe 2.3.3
+Plexiglas 8cm--> delta=99.68ns
+          30cm--> delta=357,2ns
+Aufgabe 2.3.4
+210,8cm     83,30cm
+Aufgabe 3
+Luft    0,351m
+kurze Seite:
+Wasser  0,365m
+Silikonöl 0,371m
+leerer Behälter 0,335m
+lange Seite:
+Wasser  0,387m
+Silikonöl 0,394m
+leerer Behälter 0,353m

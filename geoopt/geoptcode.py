@@ -75,6 +75,8 @@ def f_and_error(data,e):
         eer = (((e**2+(a2-a1)**2)*eabw)/(4*e**2))**2
         fer = np.sqrt(a1er + a2er + eer)
         fafer[i] = [f,fer]
+        print(np.sqrt(eer))
+        print(np.sqrt(a1er+a2er))
     return fafer;
 
 
