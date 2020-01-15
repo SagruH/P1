@@ -5,6 +5,8 @@ Plexiglas 8cm--> delta=99.68ns
           30cm--> delta=357,2ns
 Aufgabe 2.3.4
 210,8cm     83,30cm
+
+
 Aufgabe 3
 Luft    0,351m
 kurze Seite:
