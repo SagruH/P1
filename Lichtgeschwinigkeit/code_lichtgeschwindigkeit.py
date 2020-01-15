@@ -56,5 +56,62 @@ def aufgabe1():
     '''
     return;
 
+def aufgabe3():
+    '''
+    Luft    0,351m
+    kurze Seite:
+    Wasser  0,365m
+    Silikonöl 0,371m
+    leerer Behälter 0,335m
+    lange Seite:
+    Wasser  0,387m
+    Silikonöl 0,394m
+    leerer Behälter 0,353m
+    '''
+    L  = 0.351
+    Kk = 0.335
+    Wk = 0.365
+    Sk = 0.371
 
-aufgabe1()
+    Kl = 0.353
+    Wl = 0.387
+    Sl = 0.394
+    dWk = Wk - Kk
+    dSk = Sk - Kk
+    dWl = Wl - Kl
+    dSl = Sl - Kl
+    ds = np.array([dWk,dSk,dWl,dSl])
+    print("wasser kurz: ", dWk),
+    print("Silikon kurz: ", Sk-Kk)
+    print("wasser lang: ", Wl-Kl)
+    print("Silikon lang: ", Sl-Kl)
+
+    n1 = 1+ (dWk/Wk)
+    n2 = 1+ (dSk/Sk)
+    n3 = 1+ (dWl/Wl)
+    n4 = 1+ (dSl/Sl)
+    print(n1,n2,n3,n4)
+    return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aufgabe3()
