@@ -3,6 +3,7 @@ import PhyPraKit as ppk #wurde von mir verändert
 import matplotlib.pyplot as plt
 
 from scipy import stats
+from scipy import constants as const
 
 #import kafe
 #from kafe.function_tools import FitFunction, LaTeX, ASCII
@@ -86,31 +87,12 @@ def aufgabe3():
     print("wasser lang: ", Wl-Kl)
     print("Silikon lang: ", Sl-Kl)
 
-    n1 = 1+ (dWk/Wk)
-    n2 = 1+ (dSk/Sk)
-    n3 = 1+ (dWl/Wl)
-    n4 = 1+ (dSl/Sl)
+    n1 = 1+ (dWk/0.05)
+    n2 = 1+ (dSk/0.05)
+    n3 = 1+ (dWl/0.1)
+    n4 = 1+ (dSl/0.1)
     print(n1,n2,n3,n4)
     return
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
