@@ -60,13 +60,22 @@ def aufgabe11_plots():
 
     return;
 
+def linregfunc1(m,b):
+    x=np.linspace(500,3000,100)
+    f = m*x+b
+    return x,f;
 
 def aufgabe12_plots():
     U = np.linspace(600,2700,8)
     v = np.array([4,4.8,5.5,6.4,7.8,8.7,9.8,10.9])
 
+    slope, intercept, r_value, p_value, std_err = stats.linregress(U,v)
+
+    x,f = linregfunc1(slope,intercept)
+
     plt.plot(U,v, "-b")
     plt.plot(U,v, "ob")
+    plt.plot(x,f)
 
     plt.ylabel("Luftgeschwindigkeit in m/s")
     plt.xlabel("Umdrehungen pro Minute")
@@ -75,6 +84,11 @@ def aufgabe12_plots():
     plt.legend()
     plt.show()
     return;
+
+def linregfunc2(m,b):
+    x=np.linspace(3.5,11.5,100)
+    f = m*x+b
+    return x,f;
 
 def aufgabe21u2():
     dK1 = 4 #cm durchmesser der Scheiben
@@ -101,9 +115,16 @@ def aufgabe21u2():
     K2F2 = np.array([0,0.1,0.4,0.7,0.9,1.2,1.6,2])
     K3F2 = np.array([0.4,0.5,0.7,1.2,1.7,2.6,3.2,4.1])
 
+
+    slope, intercept, r_value, p_value, std_err = stats.linregress(v,K2F2)
+    x,f = linregfunc2(slope,intercept)
+    plt.plot(x,f,"-b") #linreg
     plt.plot(v,K2F2,"-b", label = "mittlere Kreisscheibe")
     plt.plot(v,K2F2,"ob")
 
+    slope, intercept, r_value, p_value, std_err = stats.linregress(v,K3F2)
+    x,f = linregfunc2(slope,intercept)
+    plt.plot(x,f,"-g") #linreg
     plt.plot(v,K3F2,"-g", label = "große Kreisscheibe")
     plt.plot(v,K3F2,"og")
 
@@ -151,4 +172,4 @@ def aufgabe23u4():
 
 
 
-aufgabe23u4()
+aufgabe21u2()
