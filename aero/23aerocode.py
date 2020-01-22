@@ -149,7 +149,7 @@ def aufgabe23u4():
     #HK konvex ; HK flach ; Kugel ; StromlK
     F_array = np.array([1.1,3.2,0.8,0.2])
 
-    cw = (2*F_array)/(p*A*v**2)
+    cw = (2*F_array*0.1)/(p*A*v**2)
 
 
     print("Querschnittfläche :" , A)
@@ -158,7 +158,7 @@ def aufgabe23u4():
     #Aufgabe2.4
     AS = 0.015*0.005 #m
     FS = 0.4
-    cwS = (2*FS)/(p*AS*v**2)
+    cwS = (2*FS*0.1)/(p*AS*v**2)
 
     print("A Spielzeug: " , AS)
     print("cw Spielzeug: " , cwS)
@@ -172,4 +172,4 @@ def aufgabe23u4():
 
 
 
-aufgabe21u2()
+aufgabe23u4()
