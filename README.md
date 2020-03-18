@@ -1,5 +1,5 @@
 # P1
-P1 Kit 
+P1 KIT 
 Code zu Teilen der Aufgaben aus dem P1 Physik Praktikum WS19/20
 
 Geschrieben in Python3 mit numpy, scipy und uncertainties für die Fehlerrechung. Kafe wurde nicht verwendet.
